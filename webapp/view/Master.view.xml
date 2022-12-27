@@ -1,0 +1,76 @@
+<mvc:View
+	controllerName="sap.ui.demo.chartdemo.controller.Master"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<Page
+		title="{i18n>title}"
+		showNavButton="false">
+		<List
+			headerText="Medir"
+			mode="MultiSelect"
+			id="MeasureList"
+			selectionChange=".onChartTypeChanged"
+			includeItemInSelection="true">
+			<StandardListItem
+				id="Lucro"
+				title="Lucro"
+				description="Lucro"
+				selected="true" />
+			<StandardListItem
+				id="Custo"
+				title="Custo"
+				description="Custo"
+				selected="true" />
+			<StandardListItem
+				id="Receita"
+				title="Receita"
+				description="Receita"
+				selected="true" />
+		</List>
+		<Panel headerText="Tipo de Gráfico">
+			<Select
+				id="select"
+				change=".onChartTypeChanged"
+				width="100%">
+				<items>
+					<core:Item text="Barra" key="Bar" />
+				</items>
+				<items>
+					<core:Item text="Linha" key="Line" />
+				</items>
+				<items>
+					<core:Item text="Coluna" key="Column" />
+				</items>
+				<items>
+					<core:Item text="Coluna Empilhada" key="Stacked_Column" />
+				</items>
+			</Select>
+			<Select
+				id="selectColor"
+				change=".onChartTypeChanged"
+				width="100%">
+				<items>
+					<core:Item text="Cor padrão" key="Default_Color" />
+				</items>
+				<items>
+					<core:Item text="Cor Semântica" key="Semantic_Color" />
+				</items>
+			</Select>
+		</Panel>
+		<Panel headerText="Efeito Popover">
+			<Select
+				id="selectPopover"
+				change=".onChartTypeChanged"
+				width="100%">
+				<items>
+					<core:Item text="Padrão" key="Default" />
+				</items>
+				<items>
+					<core:Item text="Popover do cliente" key="Customer_Popover" />
+				</items>
+			</Select>
+		</Panel>
+	</Page>
+</mvc:View>
