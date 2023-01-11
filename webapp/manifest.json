@@ -60,9 +60,9 @@
 				"settings": {
 					"bundleName": "sap.ui.demo.chartdemo.i18n.i18n",
 					"supportedLocales": [
-						""
+						"en", "pt"
 					],
-					"fallbackLocale": ""
+					"fallbackLocale": "en"
 				}
 			},
 			"": {
